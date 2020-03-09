@@ -16,9 +16,10 @@ a:hover{
   color: #ff7f7d;
 }
 .wrapper{
-  margin-left: 28%;
-  margin-right: 28%;
-  margin-top: 5%;
+  padding-top: 100px;
+  min-width: 500px;
+  max-width: 850px;
+  margin: auto;
 }
 .user{
   color: #92d144;
