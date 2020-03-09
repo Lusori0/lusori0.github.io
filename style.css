@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #2a0a1f;
+  color: white;
+  font-family: consolas;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #ef2b27;
+}
+a:hover{
+  color: #ff7f7d;
+}
+.wrapper{
+  margin-left: 28%;
+  margin-right: 28%;
+  margin-top: 5%;
+}
+.user{
+  color: #92d144;
+}
+.directory{
+  color: #61799d;
+}
+.blinking-cursor {
+  color: white;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+  0%{color: white;}
+  49%{color: white;}
+  50%{color: transparent;}
+  100%{color: transparent;}
+}
