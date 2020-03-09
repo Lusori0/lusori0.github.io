@@ -5,6 +5,14 @@
   color: white;
   font-family: consolas;
 }
+*::selection{
+	background: white;
+	color: #2a0a1f;
+}
+*::-moz-selection{
+	background: white;
+	color: #2a0a1f;
+}
 ul{
   list-style: none;
 }
