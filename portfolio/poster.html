@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+  <title>Lusorio</title>
+  <style>
+    .transition-fade{
+      transition: 0.5s;
+      opacity: 1;
+    }
+    html.is-animating .transition-fade{
+      opacity: 0;
+    }
+  </style>
+</head>
+<body class="bg-black avenir b">
+  <div class="bg-red pa1-ns"></div>
+
+<nav class="pa3 pa4-ns bg-near-black">
+  <a class="link hover-red underline-hover white f4-ns dib mr3" href="./portfolio.html" title="Home">Lusorio</a>
+  <button class="bn bg-near-black b hover-red white fr f4-ns dib mr3" id="menubutton"><u>Menu</u></button>
+  <h1 class="white tc f2-ns mt5 mb5">
+    Poster
+  </h1>
+</nav>
+
+<div class="menu absolute top-0 bottom-0 left-0 right-0 bg-black o-90" id="menupopup" style="display:none;">
+  <button class="bn static bg-black b hover-red white fr f4-ns mr5 mt5" id="closebutton"><u>Close</u></button>
+  <ul class="link static white pt7 tc f2-ns list">
+    <li class="mb3">
+      <a class="link hover-red underline-hover white"href="Work" >Work</a>
+    </li>
+    <li class="mb3">
+      <a class="link hover-red underline-hover white o-100" href="About" >About</a>
+    </li>
+    <li class="mb3">
+      <a class="link hover-red underline-hover white o-100" href="Contact" >Contact</a>
+    </li>
+  </ul>
+</div>
+
+<div class="pa3 pa4-ns center bg-black">
+  <img class="db w-40 mt5 center" src="static/posters/theatertage.png" alt="">
+  <img class="db w-40 mt5 center" src="static/posters/1.png" alt="">
+</div>
+
+</div>
+</body>
+<script>
+  menuButton = document.getElementById("menubutton");
+  menuButton.addEventListener("click", function(){
+      document.getElementById("menupopup").style.display = "block";
+        menuButton.style.display = "none";
+  });
+  closeButton = document.getElementById("closebutton");
+  closeButton.addEventListener("click", function(){
+      document.getElementById("menupopup").style.display = "none";
+      menuButton.style.display = "block";
+    })
+  
+</script>
+
+</html>
