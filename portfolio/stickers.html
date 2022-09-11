@@ -5,16 +5,14 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
   <title>Lusorio</title>
   <style>
-    .transition-fade{
-      transition: 0.5s;
-      opacity: 1;
-    }
-    html.is-animating .transition-fade{
+    body{
       opacity: 0;
+      transition: opacity 1s;
+      -webkit-transition: opacity 1s;
     }
   </style>
 </head>
-<body class="bg-black avenir b">
+<body class="bg-black avenir b", onload="document.body.style.opacity='1'">
   <div class="bg-red pa1-ns"></div>
 
 <nav class="pa3 pa4-ns bg-near-black">
