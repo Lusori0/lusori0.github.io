@@ -3,40 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+  <title>Lusorio</title>
   <style>
     body{
       opacity: 0;
       transition: opacity 1s;
       -webkit-transition: opacity 1s;
     }
-    ol{
-      list-style: none;
-      counter-reset: my-counter;
-    }
-
-    ol li{
-      counter-increment: my-counter;
-    }
-
-    ol li::before{
-      content: "0" counter(my-counter);
-      color: gray;
-      font-size: 15px;
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 10px;
-    }
-
-    
   </style>
-  <title>Lusorio</title>
+
 </head>
-<body  class="bg-near-black avenir b", onload="document.body.style.opacity='1'">
+
+<body class="bg-near-black avenir b", onload="document.body.style.opacity='1'">
   <div class="bg-red pa1-ns"></div>
 
-<nav class="pa3 pa4-ns">
-  <a class="link hover-red underline-hover white f4-ns dib mr3" href="#" title="Home">Lusorio</a>
+<nav class="pa3 pa4-ns bg-near-black">
+  <a class="link hover-red underline-hover white f4-ns dib mr3" href="./portfolio.html" title="Home">Lusorio</a>
   <button class="bn bg-near-black b hover-red white fr f4-ns dib mr3" id="menubutton"><u>Menu</u></button>
+  <h1 class="white tc f2-ns mt5 mb5">
+    Corporate Design
+  </h1>
 </nav>
 
 <div class="menu absolute top-0 bottom-0 left-0 right-0 bg-near-black o-90" id="menupopup" style="display:none;">
@@ -54,27 +40,17 @@
   </ul>
 </div>
 
-<div class="menu">
-  <ol class="link white tc f2-ns">
-    <li class="mb4">
-      <a class="link hover-red white" href="./banners.html">Banners / Headers</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./corpdesign.html">Corporate Design</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./coverart.html">Cover Art</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./poster.html">Posters</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./stickers.html">Stickers</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./3d.html">3D</a>
-    </li>
-  </ol>
+<div class="bg-moon-gray">
+  <h1 class="near-black tc f2-ns mt4 mb0 pv5">
+    Arctic Spirits
+  </h1>
+</div>
+
+<div class="pa3 pa4-ns center bg-near-black">
+  <img class="db w-50 mt5 center" src="static/corporatedesign/Branding.png" alt="">
+  <img class="db w-50 mt5 center" src="static/corporatedesign/Roster.png" alt="">
+  <img class="db w-50 mt5 center" src="static/corporatedesign/Gameday.png" alt="">
+  <img class="db w-50 mt5 center" src="static/corporatedesign/GameResult.png" alt="">
 </div>
 </body>
 <script>
