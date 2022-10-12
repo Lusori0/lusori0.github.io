@@ -2,93 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
-  <style>
-    body{
-      opacity: 0;
-      transition: opacity 1s;
-      -webkit-transition: opacity 1s;
-    }
-    ol{
-      list-style: none;
-      counter-reset: my-counter;
-    }
-
-    ol li{
-      counter-increment: my-counter;
-    }
-
-    ol li::before{
-      content: "0" counter(my-counter);
-      color: gray;
-      font-size: 15px;
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 10px;
-    }
-
-    
-  </style>
+  <script type="module", src="components.js"></script>
   <title>Lusorio</title>
 </head>
-<body  class="bg-near-black avenir b", onload="document.body.style.opacity='1'">
-  <div class="bg-red pa1-ns"></div>
-
-<nav class="pa3 pa4-ns">
-  <a class="link hover-red underline-hover white f4-ns dib mr3" href="#" title="Home">Lusorio</a>
-  <button class="bn bg-near-black b hover-red white fr f4-ns dib mr3" id="menubutton"><u>Menu</u></button>
-</nav>
-
-<div class="menu absolute top-0 bottom-0 left-0 right-0 bg-near-black o-90" id="menupopup" style="display:none;">
-  <button class="bn static bg-near-black b hover-red white fr f4-ns mr5 mt5" id="closebutton"><u>Close</u></button>
-  <ul class="link static white pt7 tc f2-ns list">
-    <li class="mb3">
-      <a class="link hover-red underline-hover white"href="Work" >Work</a>
-    </li>
-    <li class="mb3">
-      <a class="link hover-red underline-hover white o-100" href="About" >About</a>
-    </li>
-    <li class="mb3">
-      <a class="link hover-red underline-hover white o-100" href="Contact" >Contact</a>
-    </li>
-  </ul>
-</div>
-
-<div class="menu">
-  <ol class="link white tc f2-ns">
-    <li class="mb4">
-      <a class="link hover-red white" href="./banners.html">Banners / Headers</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./corpdesign.html">Corporate Design</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./coverart.html">Cover Art</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./poster.html">Posters</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./stickers.html">Stickers</a>
-    </li>
-    <li class="mb4">
-      <a class="link hover-red white" href="./3d.html">3D</a>
-    </li>
-  </ol>
-</div>
+<body style="margin:0; background-color:#111111">
+<base-site>
+  <general-header></general-header>  
+  <home-menu>
+    <home-menu-item href="./banners.html">Banner / Header</home-menu-item>
+    <home-menu-item href="./corpdesign.html">Corporate Design</home-menu-item>
+    <home-menu-item href="./coverart.html">Cover Art</home-menu-item>
+    <home-menu-item href="./poster.html">Posters</home-menu-item>
+    <home-menu-item href="./stickers.html">Stickers</home-menu-item>
+    <home-menu-item href="./3d.html">3D</home-menu-item>
+  </home-menu>
+</base-site>
 </body>
-<script>
-  menuButton = document.getElementById("menubutton");
-  menuButton.addEventListener("click", function(){
-      document.getElementById("menupopup").style.display = "block";
-        menuButton.style.display = "none";
-  });
-  closeButton = document.getElementById("closebutton");
-  closeButton.addEventListener("click", function(){
-      document.getElementById("menupopup").style.display = "none";
-      menuButton.style.display = "block";
-    })
-  
-</script>
-
 </html>
