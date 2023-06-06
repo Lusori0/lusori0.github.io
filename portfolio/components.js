@@ -1,6 +1,7 @@
 import {LitElement, css,html} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
 import {tachyons} from './tachyons.js'
 
+
 const fadein = css`
     div{
       animation: fadeInAnimation linear 1s;
@@ -129,16 +130,18 @@ customElements.define('image-container', ImageContainer);
 export class ImageElement extends LitElement{
   static properties = {
     src: {},
+    width: {},
   }
   static styles = [tachyons];
 
   constructor(){
     super();
     this.src="";
+    this.width=50;
   }
 
   render(){return html`
-    <img class="db w-50 mt5 center" src="${this.src}" alt="">
+    <img class="db w-${this.width} mt5 center" src="${this.src}" alt="">
   `
   }
 }
