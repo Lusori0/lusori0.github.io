@@ -127,6 +127,24 @@ export class ImageContainer extends LitElement{
 }
 customElements.define('image-container', ImageContainer);
 
+export class VideoElement extends LitElement{
+  static properties = {
+    src: {},
+    width: {},
+  }
+  static styles = [tachyons];
+  constructor(){
+    super();
+    this.src="";
+    this.width=30;
+  }
+  render(){return html`
+    <img class=" transparent db w-${this.width} mt5 center" src="${this.src}" alt="">
+  `
+  }
+}
+customElements.define('video-element', VideoElement);
+
 export class ImageElement extends LitElement{
   static properties = {
     src: {},
