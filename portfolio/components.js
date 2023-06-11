@@ -58,7 +58,8 @@ customElements.define('general-header', GeneralHeader);
 export class HomeMenu extends LitElement{
   static styles = [tachyons, css`
     ol{
-      list-style: none;
+      list-style-type: none;
+      padding: 0px;
       counter-reset: my-counter;
     }
     `];
