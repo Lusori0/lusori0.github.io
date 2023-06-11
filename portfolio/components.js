@@ -1,7 +1,6 @@
 import {LitElement, css,html} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
 import {tachyons} from './tachyons.js'
 
-
 const fadein = css`
     div{
       animation: fadeInAnimation linear 1s;
@@ -42,11 +41,11 @@ export class GeneralHeader extends LitElement{
 
   render(){
     return html`
-      <div class="bg-red pa1-ns"></div>
-      <nav class="pa3 pa4-ns">
-        <a class="link hover-red underline-hover b white f4-ns dib mr3" href="./portfolio.html" title="Home">Lusorio</a>
-        <a class="link underline-hover b hover-red white fr f4-ns dib mr3" href="https://lusori0.github.io">About Me</a>
-        <h1 class="white tc f2-ns mt5 mb5">
+      <div class="bg-red pa1"></div>
+      <nav class="ph4 pv3 pa4-ns">
+        <a class="link hover-red underline-hover b white f6 f4-ns dib" href="./portfolio.html" title="Home">Lusorio</a>
+        <a class="link underline-hover b hover-red white fr f6 f4-ns dib" href="https://lusori0.github.io">About Me</a>
+        <h1 class="white tc f3 f2-ns mt4 mt5-ns mb2 mb5-ns">
           <slot></slot>
         </h1>
       </nav>
@@ -69,7 +68,7 @@ export class HomeMenu extends LitElement{
   }
 
   render(){return html`<div class="menu">
-    <ol class="link white tc f2-ns">
+    <ol class="link white tc f3 f2-ns">
       <slot></slot>
     </ol>
   </div>
@@ -120,7 +119,7 @@ export class ImageContainer extends LitElement{
   }
 
   render(){return html`
-    <div class="pa3 pa4-ns center bg-near-black">
+    <div class="pa2 pa4-ns center bg-near-black">
       <slot></slot>
     </div>
   `
@@ -140,7 +139,7 @@ export class VideoElement extends LitElement{
     this.width=30;
   }
   render(){return html`
-    <img class=" transparent db w-${this.width} mt5 center" src="${this.src}" alt="">
+    <img class=" transparent db w-${parseInt(this.width)+50} w-${this.width}-ns mb5 center" src="${this.src}" alt="">
   `
   }
 }
@@ -160,7 +159,7 @@ export class ImageElement extends LitElement{
   }
 
   render(){return html`
-    <img class="db w-${this.width} mt5 center" src="${this.src}" alt="">
+    <img class="db w-${parseInt(this.width)+30} w-${this.width}-ns mb4 mb5-ns center" src="${this.src}" alt="">
   `
   }
 }
@@ -176,7 +175,7 @@ export class SectionDivider extends LitElement{
 
   render(){return html`
     <div class="bg-moon-gray">
-      <h1 class="near-black tc f2-ns mt4 mb0 pv5">
+      <h1 class="near-black tc f3 mt4 mb4 pv2 pv5-ns">
         <slot></slot>
       </h1>
     </div>
