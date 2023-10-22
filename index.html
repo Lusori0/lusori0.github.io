@@ -1,56 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-		<meta charset="UTF-8">
-    <script>
-      class Command extends HTMLElement{
-        connectedCallback(){
-          let directory = this.getAttribute("dir");
-          let cmnd = this.getAttribute("cmnd");
-          let content = this.getAttribute("content");
-          this.innerHTML = `
-              <span class="user">user@ubuntu</span>:<span class="directory">${directory}</span>$
-                ${cmnd}
-              <p>
-                ${content}
-              </p>
-            `
-        }
-      }
-    </script>
-		<link rel="stylesheet" href="style.css">
-    <script>customElements.define('command-element', Command);</script>
-		<title>Lusorio</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <command-element dir="~", cmnd="cat aboutme.txt", content='
-			Welcome to my Website!</br>
-      I am Manuel, a CS-student from germany, currently working towards my bachelor at TU Munich. I am interested in software development,
-      low level programming and computer architecture as well as computer graphics and much more. I like working with
-      Python, C and NodeJS the most, but I am always looking out for new technologies to dabble in. <br>
-      Have a look around my projects and see what interests you.
-        '></command-element>
-      <command-element dir="~", cmnd="cd Documents", content=''></command-element>
-      <command-element dir="~/Documents", cmnd="cat projects.txt", content='
-		<ul>
-			<li><a href="./portfolio/portfolio.html">Graphic Design</a></li>
-			<li><a href="https://lusori0.github.io/Lusorios-Pixel-Sorter/">Pixelsorter</a></li>
-			<li><a href="https://github.com/Lusori0/hue/releases/">Hue</a></li>
-			<li><a href="https://pypi.org/project/colorsofmotion/">Colors of Motion</a></li>
-			<li><a href="https://lusorio.itch.io/touhouspace">Touhou Space</a></li>
-		</ul> '></command-element>
-      <command-element dir="~/Documents", cmnd="cat findmeon.txt", content='
-		<ul>
-			<li><a href="mailto:m.buenstorf@tum.de">m.buenstorf@tum.de</a></li>
-			<a href="https://www.ko-fi.com/lusorio">Donate</a> 
-			<li><a href="https://github.com/Lusori0">Github</a></li>
-		</ul>
-        '></command-element>
-      <command-element dir="~/Documents", cmnd="serve -p 1337 --ssl CV.pdf", content='
-        <a href="./CV.pdf" download="CV.pdf">CV.pdf</a>
-        '></command-element>
-      <command-element dir="~/Documents", cmnd='<span class="blinking-cursor">&block;</span>', content=''></command-element>
-    </div>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="module", src="components.js"></script>
+  <title>Lusorio</title>
+</head>
+<body style="margin:0;background:#111111;">
+<base-site>
+    <general-header><div style="font-size: 80px;">I'm Lusorio</div></general-header>
+    <general-paragraph>
+      I am a Computer Science student at the Technical University of Munich</br>
+      and currently working as a DevOps Engineer
+    </general-paragraph>
+    <ascii-art></ascii-art>
+</base-site>
+</body>
 </html>
